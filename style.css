@@ -1,0 +1,570 @@
+@font-face {
+  font-family: "Rubik";
+  src: url(assets/fonts/Rubik/static/Rubik-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(assets/fonts/Rubik/static/Rubik-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url(assets/fonts/Rubik/static/Rubik-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto_Slab/static/RobotoSlab-Bold.ttf)
+    format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto_Slab/static/RobotoSlab-Medium.ttf)
+    format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(assets/fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf)
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: rgb(241, 241, 240);
+}
+
+.navigation-container {
+  color: #38b000;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: row;
+  flex: auto;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+}
+
+.navigation-container ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.navigation-container ul li {
+  margin: 0 2px;
+  padding: 5px;
+}
+
+.navigation-container ul li a {
+  text-decoration: none;
+}
+
+a:link {
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+}
+
+a:active {
+  color: inherit;
+}
+
+.basket-container {
+  width: 28px;
+  height: 27px;
+  position: relative;
+}
+
+.count-basket {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  font-size: smaller;
+  border-radius: 50%;
+  padding: 0.5px;
+  text-align: center;
+  background-color: #3ab800;
+  color: #fff;
+  z-index: 1;
+}
+
+.icon-basket {
+  position: absolute;
+  color: #38b000;
+  font-size: 32px;
+  height: 100%;
+}
+
+.image-rounded {
+  width: 25px;
+  height: 24px;
+  object-fit: cover;
+  object-position: center;
+  box-sizing: unset;
+  border: 1px solid rgb(56, 176, 0);
+  border-radius: 50%;
+}
+
+.none-list-styles {
+  list-style: none;
+}
+
+.header-container {
+  position: relative;
+  background-image: url(assets/images/baiq-daling_food_bg.jpg);
+  top: 60px;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header-text {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text h2,
+.header-text h3 {
+  margin: 10px 30px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.header-text h3 strong {
+  color: rgb(56, 176, 0);
+}
+
+.stable {
+  position: relative;
+  top: 60px;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 25px auto;
+}
+
+.item-card {
+  background-color: #fff;
+  box-shadow: 0.5px 1px 2.5px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 20px;
+  width: 240px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-card {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.item-card h3 {
+  padding: 10px 0px;
+  width: 80%;
+  height: 15%;
+}
+
+.item-card p {
+  width: 80%;
+  height: 15%;
+}
+
+.item-card button {
+  width: 80%;
+  height: 10%;
+  cursor: pointer;
+  background-color: #2dbf2d;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Styles Carts */
+.cart-container {
+  width: 80%;
+  margin: 20px auto 50px;
+}
+
+.cart-container h3 {
+  padding: 10px 0px;
+  border-bottom: 1px solid #2dbf2d;
+}
+
+.cart-products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.products {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  border-bottom: 0.1px solid #2dbf2d;
+}
+
+.products:nth-child(even) {
+  background-color: #fff;
+}
+
+.left {
+  width: 85%;
+  height: 100%;
+}
+
+.right {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.top,
+.bottom {
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+
+.product,
+.quantity {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price,
+.total {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity div {
+  width: 40px;
+  text-align: center;
+}
+
+.delete-button {
+  color: #e42e28;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.count-button {
+  color: #7ebd3a;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.total-products-container {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.total-title {
+  display: flex;
+  width: 80%;
+  justify-content: flex-end;
+}
+
+.total-cost {
+  display: flex;
+  width: 20%;
+  justify-content: center;
+}
+
+.action-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action-button {
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2dbf2d;
+  color: #fff;
+  padding: 10px;
+}
+
+.external-browser {
+  display: flex;
+  justify-content: center;
+  margin: 10px auto;
+  padding: 5px 0px;
+}
+
+.external-browser button {
+  width: 30%;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2fb689;
+  color: #fff;
+  padding: 15px;
+}
+
+.logout-style button {
+  background-color: #ca2626;
+}
+
+.logout-style {
+  padding-bottom: 30px;
+}
+
+.login-head {
+  color: #38b000;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.login-message {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.login-button-style {
+  display: flex;
+  justify-content: center;
+}
+
+.login-button-style button {
+  width: 30%;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #2dbf2d;
+  color: #fff;
+  padding: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+@media (max-width: 425px) {
+  * {
+    font-size: medium;
+  }
+
+  .navigation-container h1 {
+    font-size: 18px;
+  }
+
+  .header-container {
+    height: 280px;
+  }
+
+  .item-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .item-card {
+    width: 90%;
+    height: 100px;
+    margin: 10px;
+    flex-direction: row;
+    border-radius: 4px;
+  }
+
+  .image-card {
+    width: 30%;
+    height: 100%;
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  .item-card h3 {
+    padding: 0px 10px;
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+  }
+
+  .item-card p {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+  }
+
+  .item-card button {
+    width: 20%;
+    height: 30%;
+    margin-right: 10px;
+  }
+
+  /* Styles Carts */
+  .cart-container {
+    width: 90%;
+  }
+
+  .product h4,
+  .top div,
+  .quantity div span,
+  .total,
+  .total-title,
+  .total-cost {
+    font-size: small;
+  }
+
+  .products {
+    height: 50px;
+  }
+
+  .product,
+  .price,
+  .quantity,
+  .total {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .total-products-container {
+    height: 40px;
+  }
+
+  .total-title {
+    width: 60%;
+  }
+
+  .total-cost {
+    width: 40%;
+  }
+
+  .delete-button,
+  .count-button {
+    font-size: 20px;
+  }
+
+  .action-button {
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+
+  .login-head {
+    font-size: 20px;
+    height: 50px;
+  }
+
+  .login-message {
+    font-weight: 500;
+  }
+
+  .login-button-style button {
+    width: 90%;
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+
+  .external-browser button {
+    width: 90%;
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) {
+  .item-card h3,
+  .item-card p,
+  .item-card button {
+    font-size: smaller;
+  }
+
+  .item-card {
+    height: 70px;
+    margin: 5px;
+  }
+
+  .item-card button {
+    margin-right: 5px;
+  }
+}

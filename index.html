@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kedai Raya</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main-content">
+      <header>
+        <nav class="navigation-container">
+          <h1 style="font-family: 'Roboto', sans-serif">Kedai Raya</h1>
+          <ul>
+            <li class="none-list-styles">
+              <div class="basket-container">
+                <a href="#checkout">
+                  <ion-icon class="icon-basket" name="bag-handle"></ion-icon>
+                  <span class="count-basket">0</span>
+                </a>
+              </div>
+            </li>
+            <li class="none-list-styles">
+              <img
+                id="image-user"
+                class="image-rounded"
+                src=""
+                alt="User Image"
+              />
+            </li>
+          </ul>
+        </nav>
+        <div class="header-container">
+          <div class="overlay"></div>
+          <div class="header-text">
+            <h2>
+              Hai <span class="customer"></span>! Selamat datang di kedai Raya,
+              kami punya aneka makanan dan minuman yang siap untuk nyenengin
+              kamu
+            </h2>
+            <h3>
+              Yuk pesen! kami siap nganterin dimanapun kamu berada...
+              <strong>"gratis ongkir lohhh"</strong>
+            </h3>
+          </div>
+        </div>
+      </header>
+      <main class="stable">
+        <h2 class="item-container">Makanan</h2>
+        <div class="item-container">
+          <div class="item-card">
+            <img class="image-card" src="assets/images/cilok.jpg" alt="Cilok" />
+            <h3>Cilok</h3>
+            <p>Harga: Rp6.000/ porsi</p>
+            <button class="add-cart" type="submit">Tambah</button>
+          </div>
+          <div class="item-card">
+            <img
+              class="image-card"
+              src="assets/images/batagor.jpg"
+              alt="Batagor"
+            />
+            <h3>Batagor</h3>
+            <p>Harga: Rp8.000/ porsi</p>
+            <button class="add-cart" type="submit">Tambah</button>
+          </div>
+          <div class="item-card">
+            <img
+              class="image-card"
+              src="assets/images/seblak.jpg"
+              alt="Seblak"
+            />
+            <h3>Seblak</h3>
+            <p>Harga: Rp13.000/ porsi</p>
+            <button class="add-cart" type="submit">Tambah</button>
+          </div>
+          <div class="item-card">
+            <img
+              class="image-card"
+              src="assets/images/bakmipangsit.png"
+              alt="Bakmi Pangsit"
+            />
+            <h3>Bakmi Pangsit</h3>
+            <p>Harga: Rp10.000/ porsi</p>
+            <button class="add-cart" type="submit">Tambah</button>
+          </div>
+        </div>
+        <h2 class="item-container">Minuman</h2>
+        <div class="item-container">
+          <div class="item-card">
+            <img
+              class="image-card"
+              src="assets/images/cincau_hijau.jpeg"
+              alt="Es Cincau Hijau"
+            />
+            <h3>Es Cincau Hijau</h3>
+            <p>Harga: Rp8.000/ porsi</p>
+            <button class="add-cart" type="submit">Tambah</button>
+          </div>
+          <div class="item-card">
+            <img
+              class="image-card"
+              src="assets/images/campur.jpg"
+              alt="Es Campur"
+            />
+            <h3>Es Campur</h3>
+            <p>Harga: Rp11.000/ porsi</p>
+            <button class="add-cart" type="submit">Tambah</button>
+          </div>
+          <div class="item-card">
+            <img
+              class="image-card"
+              src="assets/images/jusmangga.jpg"
+              alt="Jus Mangga"
+            />
+            <h3>Jus Mangga</h3>
+            <p>Harga: Rp9.000/ porsi</p>
+            <button class="add-cart" type="submit">Tambah</button>
+          </div>
+          <div class="item-card">
+            <img
+              class="image-card"
+              src="assets/images/tehlemon.jpg"
+              alt="Teh Lemon"
+            />
+            <h3>Teh Lemon</h3>
+            <p>Harga: Rp7.000/ porsi</p>
+            <button class="add-cart" type="submit">Tambah</button>
+          </div>
+        </div>
+        <div id="checkout" class="cart-container">
+          <h3>Keranjang Belanja <span class="customer"></span>!</h3>
+          <div class="cart-products"></div>
+          <div class="action-container">
+            <button id="liff-action-button" class="action-button">
+              Pesan Sekarang
+            </button>
+          </div>
+        </div>
+      </main>
+      <footer class="stable">
+        <div class="external-container external-browser">
+          <button id="liff-external-browser-button">
+            Buka di eksternal browser
+          </button>
+        </div>
+        <div class="logout-container external-browser logout-style">
+          <button id="liff-logout-button">Log Out</button>
+        </div>
+      </footer>
+    </div>
+    <div id="login-content">
+      <header>
+        <h1 class="login-head">Kedai Raya</h1>
+      </header>
+      <main>
+        <h3 class="login-message">
+          Karena kamu mengakses Kedai Raya lewat external browser, jadi kamu
+          harus login dahulu yaa!
+        </h3>
+        <div class="login-container login-button-style">
+          <button id="liff-login-button">Log In</button>
+        </div>
+      </main>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.2.3/dist/ionicons/ionicons.js"
+    ></script>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="kedai-config.js"></script>
+    <script src="liff-starter.js"></script>
+  </body>
+</html>
